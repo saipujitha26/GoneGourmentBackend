@@ -28,10 +28,10 @@ public class UnavailableItemsController {
         return brandRepository.findAll();
     }
 
-    @GetMapping("/locations/{brandId}")
-    public List<Location> getLocationsByBrand(@PathVariable Long brandId) {
-        return locationRepository.findByRestaurantBrand_Id(brandId);
-    }
+//    @GetMapping("/locations/{brandId}")
+//    public List<Location> getLocationsByBrand(@PathVariable Long id) {
+//        return locationRepository.findByLocationId(id);
+//    }
 
     @GetMapping("/unavailable-items/{locationId}")
     public List<UnavailableItem> getUnavailableItems(@PathVariable Long locationId) {

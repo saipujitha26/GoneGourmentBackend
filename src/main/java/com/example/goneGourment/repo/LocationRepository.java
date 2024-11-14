@@ -7,6 +7,6 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 @Repository
 public interface LocationRepository extends JpaRepository<Location, Long> {
-    List<Location> findByRestaurantBrand_Id(Long restaurantBrandId);
+   // List<Location> findByLocationId(Long id);
 
 }

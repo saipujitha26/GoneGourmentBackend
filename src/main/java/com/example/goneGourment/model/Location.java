@@ -2,25 +2,24 @@ package com.example.goneGourment.model;
 
 import jakarta.persistence.*;
 
-import java.util.List;
-
 @Entity
 public class Location {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String city;
-    @ManyToOne
-    @JoinColumn(name = "restaurant_brand_id")
-    private List<RestaurantBrand> restaurantBrands;
+//    @ManyToOne
+//    @JoinColumn(name = "restaurant_brand_id")
+//    private RestaurantBrand restaurantBrand;
 
     public Location() {
     }
 
-    public Location(Long id, String city, List<RestaurantBrand> restaurantBrands) {
+    public Location(Long id, String city){
+//            , RestaurantBrand restaurantBrand) {
         this.id = id;
         this.city = city;
-        this.restaurantBrands = restaurantBrands;
+//        this.restaurantBrand = restaurantBrand;
     }
 
     public Long getId() {
@@ -39,20 +38,20 @@ public class Location {
         this.city = city;
     }
 
-    public List<RestaurantBrand> getRestaurantBrand() {
-        return restaurantBrands;
-    }
-
-    public void setRestaurantBrand(List<RestaurantBrand> restaurantBrands) {
-        this.restaurantBrands = restaurantBrands;
-    }
+//    public RestaurantBrand getRestaurantBrand() {
+//        return restaurantBrand;
+//    }
+//
+//    public void setRestaurantBrand(RestaurantBrand restaurantBrand) {
+//        this.restaurantBrand = restaurantBrand;
+//    }
 
     @Override
     public String toString() {
         return "Location{" +
                 "id=" + id +
                 ", city='" + city + '\'' +
-                ", restaurantBrands=" + restaurantBrands +
+//                ", restaurantBrand=" + restaurantBrand +
                 '}';
     }
 }
